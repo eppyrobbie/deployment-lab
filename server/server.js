@@ -11,7 +11,9 @@ app.use(cors())
 const {home} = require("./controllers/pageCtrl")
 
 app.get("/", home)
-
+app.get("/css", (req, res) => {
+    res.sendFile(path.join(__dirname, "../index.css"))
+})
 
 const { PORT } = process.env
 
