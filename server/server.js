@@ -8,10 +8,11 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-const {home, css} = require("./controllers/pageCtrl")
+const {home, css, button} = require("./controllers/pageCtrl")
 
 app.get("/", home)
 app.get("/css", css)
+app.get("/js", button)
 
 const { PORT } = process.env
 
